@@ -59,6 +59,9 @@
                 "name": "keyword.operator.comparison.razor-script",
                 "match": "==|!=|=|<|>|>=|<="
 
+            }, {
+                "name": "keyword.operator.as.razor-script",
+                "match": "(?<![_$[:alnum:]])(?:(?<=\\.\\.\\.)|(?<!\\.))as(?![_$[:alnum:]])(?:(?=\\.\\.\\.)|(?!\\.))"
             }]
         },
         "numeric-literal": {
