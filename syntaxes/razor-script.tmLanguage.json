@@ -2,8 +2,12 @@
     "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
     "name": "Razor Script",
     "patterns": [{
-        "include": "#comments"
-    }],
+            "include": "#comments"
+        },
+        {
+            "include": "#ctrl-flow-statements"
+        }
+    ],
     "repository": {
         "comments": {
             "patterns": [{
@@ -24,6 +28,12 @@
                 },
                 "end": "\\n",
                 "name": "comment.line.number-sign.razor-script"
+            }]
+        },
+        "ctrl-flow-statements": {
+            "patterns": [{
+                "name": "keyword.control.razor-script",
+                "match": "\\b(if|else|elseif|endif|for|endfor|while|endwhile|break|continue|loop|replay|stop)\\b"
             }]
         }
     },
