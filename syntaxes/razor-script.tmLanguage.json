@@ -40,7 +40,89 @@
             }]
         },
         "value-types": {
-            "patterns": []
+            "patterns": [{
+                "include": "#numeric-literal"
+            }]
+        },
+        "numeric-literal": {
+            "patterns": [{
+                    "name": "constant.numeric.hex.razor-script",
+                    "match": "\\b(?<!\\$)0(?:x|X)[0-9a-fA-F][0-9a-fA-F_]*(n)?\\b(?!\\$)",
+                    "captures": {
+                        "1": {
+                            "name": "storage.type.numeric.bigint.razor-script"
+                        }
+                    }
+                },
+                {
+                    "name": "constant.numeric.binary.razor-script",
+                    "match": "\\b(?<!\\$)0(?:b|B)[01][01_]*(n)?\\b(?!\\$)",
+                    "captures": {
+                        "1": {
+                            "name": "storage.type.numeric.bigint.razor-script"
+                        }
+                    }
+                },
+                {
+                    "name": "constant.numeric.octal.razor-script",
+                    "match": "\\b(?<!\\$)0(?:o|O)?[0-7][0-7_]*(n)?\\b(?!\\$)",
+                    "captures": {
+                        "1": {
+                            "name": "storage.type.numeric.bigint.razor-script"
+                        }
+                    }
+                },
+                {
+                    "match": "(?x)\n(?<!\\$)(?:\n  (?:\\b[0-9][0-9_]*(\\.)[0-9][0-9_]*[eE][+-]?[0-9][0-9_]*(n)?\\b)| # 1.1E+3\n  (?:\\b[0-9][0-9_]*(\\.)[eE][+-]?[0-9][0-9_]*(n)?\\b)|             # 1.E+3\n  (?:\\B(\\.)[0-9][0-9_]*[eE][+-]?[0-9][0-9_]*(n)?\\b)|             # .1E+3\n  (?:\\b[0-9][0-9_]*[eE][+-]?[0-9][0-9_]*(n)?\\b)|                 # 1E+3\n  (?:\\b[0-9][0-9_]*(\\.)[0-9][0-9_]*(n)?\\b)|                      # 1.1\n  (?:\\b[0-9][0-9_]*(\\.)(n)?\\B)|                                  # 1.\n  (?:\\B(\\.)[0-9][0-9_]*(n)?\\b)|                                  # .1\n  (?:\\b[0-9][0-9_]*(n)?\\b(?!\\.))                                 # 1\n)(?!\\$)",
+                    "captures": {
+                        "0": {
+                            "name": "constant.numeric.decimal.razor-script"
+                        },
+                        "1": {
+                            "name": "meta.delimiter.decimal.period.razor-script"
+                        },
+                        "2": {
+                            "name": "storage.type.numeric.bigint.razor-script"
+                        },
+                        "3": {
+                            "name": "meta.delimiter.decimal.period.razor-script"
+                        },
+                        "4": {
+                            "name": "storage.type.numeric.bigint.razor-script"
+                        },
+                        "5": {
+                            "name": "meta.delimiter.decimal.period.razor-script"
+                        },
+                        "6": {
+                            "name": "storage.type.numeric.bigint.razor-script"
+                        },
+                        "7": {
+                            "name": "storage.type.numeric.bigint.razor-script"
+                        },
+                        "8": {
+                            "name": "meta.delimiter.decimal.period.razor-script"
+                        },
+                        "9": {
+                            "name": "storage.type.numeric.bigint.razor-script"
+                        },
+                        "10": {
+                            "name": "meta.delimiter.decimal.period.razor-script"
+                        },
+                        "11": {
+                            "name": "storage.type.numeric.bigint.razor-script"
+                        },
+                        "12": {
+                            "name": "meta.delimiter.decimal.period.razor-script"
+                        },
+                        "13": {
+                            "name": "storage.type.numeric.bigint.razor-script"
+                        },
+                        "14": {
+                            "name": "storage.type.numeric.bigint.razor-script"
+                        }
+                    }
+                }
+            ]
         }
     },
     "scopeName": "source.razor"
