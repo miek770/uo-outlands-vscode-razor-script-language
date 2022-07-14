@@ -9,6 +9,9 @@
         },
         {
             "include": "#value-types"
+        },
+        {
+            "include": "#operators"
         }
     ],
     "repository": {
@@ -50,6 +53,9 @@
                     "include": "#string-literal"
                 }
             ]
+        },
+        "operators": {
+            "patterns": []
         },
         "numeric-literal": {
             "patterns": [{
