@@ -6,6 +6,9 @@
         },
         {
             "include": "#ctrl-flow-statements"
+        },
+        {
+            "include": "#value-types"
         }
     ],
     "repository": {
@@ -35,6 +38,9 @@
                 "name": "keyword.control.razor-script",
                 "match": "\\b(if|else|elseif|endif|for|endfor|while|endwhile|break|continue|loop|replay|stop)\\b"
             }]
+        },
+        "value-types": {
+            "patterns": []
         }
     },
     "scopeName": "source.razor"
