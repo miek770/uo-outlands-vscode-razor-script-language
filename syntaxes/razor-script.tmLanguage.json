@@ -41,8 +41,12 @@
         },
         "value-types": {
             "patterns": [{
-                "include": "#numeric-literal"
-            }]
+                    "include": "#numeric-literal"
+                },
+                {
+                    "include": "#boolean-literal"
+                }
+            ]
         },
         "numeric-literal": {
             "patterns": [{
@@ -123,6 +127,18 @@
                     }
                 }
             ]
+        },
+        "boolean-literal": {
+            "patterns": [{
+                    "name": "constant.language.boolean.true.razor-script",
+                    "match": "(?<![_$[:alnum:]])(?:(?<=\\.\\.\\.)|(?<!\\.))true(?![_$[:alnum:]])(?:(?=\\.\\.\\.)|(?!\\.))"
+                },
+                {
+                    "name": "constant.language.boolean.false.razor-script",
+                    "match": "(?<![_$[:alnum:]])(?:(?<=\\.\\.\\.)|(?<!\\.))false(?![_$[:alnum:]])(?:(?=\\.\\.\\.)|(?!\\.))"
+                }
+            ]
+
         }
     },
     "scopeName": "source.razor"
