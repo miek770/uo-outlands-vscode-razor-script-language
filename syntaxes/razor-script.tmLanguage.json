@@ -143,7 +143,34 @@
             ]
         },
         "string-literal": {
-            "patterns": []
+            "patterns": [{
+                "include": "#string-single"
+            }]
+        },
+        "string-single": {
+            "name": "string.quoted.single.razor-script",
+            "begin": "'",
+            "beginCaptures": {
+                "0": {
+                    "name": "punctuation.definition.string.begin.razor-script"
+                }
+            },
+            "end": "(\\')|((?:[^\\\\\\n])$)",
+            "endCaptures": {
+                "1": {
+                    "name": "punctuation.definition.string.end.razor-script"
+                },
+                "2": {
+                    "name": "invalid.illegal.newline.razor-script"
+                }
+            },
+            "patterns": [{
+                "include": "#string-character-escape"
+            }]
+        },
+        "string-character-escape": {
+            "name": "constant.character.escape.razor-script",
+            "match": "\\\\(x[0-9A-Fa-f]{2}|u[0-9A-Fa-f]{4}|u\\{[0-9A-Fa-f]+\\}|[0-2][0-7]{0,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.|$)"
         }
     },
     "scopeName": "source.razor"
