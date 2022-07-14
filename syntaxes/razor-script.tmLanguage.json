@@ -62,6 +62,9 @@
             }, {
                 "name": "keyword.operator.as.razor-script",
                 "match": "(?<![_$[:alnum:]])(?:(?<=\\.\\.\\.)|(?<!\\.))as(?![_$[:alnum:]])(?:(?=\\.\\.\\.)|(?!\\.))"
+            }, {
+                "name": "keyword.operator.logical.razor-script",
+                "match": "\\b(not|and|or)\\b"
             }]
         },
         "numeric-literal": {
