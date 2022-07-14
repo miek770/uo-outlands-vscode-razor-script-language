@@ -12,6 +12,9 @@
         },
         {
             "include": "#operators"
+        },
+        {
+            "include": "#reserveds"
         }
     ],
     "repository": {
@@ -40,6 +43,17 @@
             "patterns": [{
                 "name": "keyword.control.razor-script",
                 "match": "\\b(if|else|elseif|endif|for|endfor|while|endwhile|break|continue|loop|replay|stop)\\b"
+            }]
+        },
+        "reserveds": {
+            "patterns": [{
+                "include": "#language-constants"
+            }]
+        },
+        "language-constants": {
+            "patterns": [{
+                "name": "variable.language.constants.razor-script",
+                "match": "\\b(count|counter|findbuff|findtype|hidden|hp|maxhp|hits|maxhits|insysmsg|insysmessage|lhandempty|mana|maxmana|mounted|poisoned|position|queued|rhandempty|skill|stam|maxstam|str|dex|int|weight)\\b"
             }]
         },
         "value-types": {
