@@ -42,7 +42,7 @@
         "ctrl-flow-statements": {
             "patterns": [{
                 "name": "keyword.control.razor-script",
-                "match": "\\b(if|else|elseif|endif|for|endfor|while|endwhile|break|continue|loop|replay|stop)\\b"
+                "match": "\\b(if|else|elseif|endif|for|endfor|while|endwhile|break|continue|loop|replay|stop|in)\\b"
             }]
         },
         "reserveds": {
