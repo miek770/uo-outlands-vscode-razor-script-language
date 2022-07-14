@@ -144,8 +144,12 @@
         },
         "string-literal": {
             "patterns": [{
-                "include": "#string-single"
-            }]
+                    "include": "#string-single"
+                },
+                {
+                    "include": "#string-double"
+                }
+            ]
         },
         "string-single": {
             "name": "string.quoted.single.razor-script",
@@ -156,6 +160,27 @@
                 }
             },
             "end": "(\\')|((?:[^\\\\\\n])$)",
+            "endCaptures": {
+                "1": {
+                    "name": "punctuation.definition.string.end.razor-script"
+                },
+                "2": {
+                    "name": "invalid.illegal.newline.razor-script"
+                }
+            },
+            "patterns": [{
+                "include": "#string-character-escape"
+            }]
+        },
+        "string-double": {
+            "name": "string.quoted.double.razor-script",
+            "begin": "\"",
+            "beginCaptures": {
+                "0": {
+                    "name": "punctuation.definition.string.begin.razor-script"
+                }
+            },
+            "end": "(\")|((?:[^\\\\\\n])$)",
             "endCaptures": {
                 "1": {
                     "name": "punctuation.definition.string.end.razor-script"
