@@ -55,7 +55,7 @@
         "language-constants": {
             "patterns": [{
                 "name": "variable.language.constants.razor-script",
-                "match": "\\b(count|counter|findbuff|findtype|hidden|hp|maxhp|hits|maxhits|insysmsg|insysmessage|lhandempty|mana|maxmana|mounted|poisoned|position|queued|rhandempty|skill|stam|maxstam|str|dex|int|weight)\\b"
+                "match": "\\b(hue|name|paralyzed|invul|warmode|noto|dead|maxweight|diffweight|diffhits|diffmana|diffstam|counttype|gumpexists|ingump|varexist|bandaging|ground|index|count|counter|hidden|hp|maxhp|hits|maxhits|insysmsg|insysmessage|lhandempty|mana|maxmana|mounted|poisoned|position|queued|rhandempty|skill|stam|maxstam|str|dex|int|weight)\\b"
             }]
         },
         "skills": {
