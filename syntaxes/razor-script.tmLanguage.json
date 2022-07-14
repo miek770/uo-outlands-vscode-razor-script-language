@@ -55,7 +55,11 @@
             ]
         },
         "operators": {
-            "patterns": []
+            "patterns": [{
+                "name": "keyword.operator.comparison.razor-script",
+                "match": "==|!=|=|<|>|>=|<="
+
+            }]
         },
         "numeric-literal": {
             "patterns": [{
