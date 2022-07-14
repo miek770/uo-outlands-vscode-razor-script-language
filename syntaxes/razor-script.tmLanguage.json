@@ -52,6 +52,8 @@
                 "include": "#skills"
             }, {
                 "include": "#targets"
+            }, {
+                "include": "#commands"
             }]
         },
         "language-constants": {
@@ -70,6 +72,12 @@
             "patterns": [{
                 "name": "support.constant.targets.razor-script",
                 "match": "\\b(backpack|self|imbuing|nonfriendly|friendly|enemy|red|murderer|gray|grey|criminal|blue|innocent|friend|RightHand|LeftHand|Shoes|Pants|Shirt|Head|Gloves|Ring|Talisman|Neck|Hair|Waist|InnerTorso|Face|Bracelet|FacialHair|MiddleTorso|Earrings|Arms|Cloak|Backpack|OuterTorso|OuterLegs|InnerLegs)\\b"
+            }]
+        },
+        "commands": {
+            "patterns": [{
+                "name": "entity.name.function.razor-script",
+                "match": "\\b(createlist|clearlist|removelist|pushlist|poplist|listexists|list|inlist|atlist|createtimer|removetimer|settimer|timer|timerexists|setvar|unsetvar|ignore|unignore|clearignore|warmode|getlabel|rename|skill|setskill|waitforgump|gumpresponse|gumpclose|alliance|attack|cast|clearall|clearhands|clearsysmsg|find|findlayer|findbuff|targetexists|followers|findtype|findtypelist|dclick|dclicktype|dress|drop|droprelloc|emote|guild|gumpresponse|gumpclose|hotkey|lasttarget|lift|lifttype|menu|menuresponse|organizer|overhead|potion|promptresponse|random|restock|say|script|scavenger|sell|setability|setlasttarget|setvar|skill|sysmsg|target|targetrelloc|targetloc|targettype|undress|useonce|virtue|walk|wait|pause|waitforgump|waitformenu|waitforprompt|waitforsysmsg|waitfortarget|whisper|yell)\\b"
             }]
         },
         "value-types": {
