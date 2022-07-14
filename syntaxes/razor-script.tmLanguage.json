@@ -45,6 +45,9 @@
                 },
                 {
                     "include": "#boolean-literal"
+                },
+                {
+                    "include": "#string-literal"
                 }
             ]
         },
@@ -138,7 +141,9 @@
                     "match": "(?<![_$[:alnum:]])(?:(?<=\\.\\.\\.)|(?<!\\.))false(?![_$[:alnum:]])(?:(?=\\.\\.\\.)|(?!\\.))"
                 }
             ]
-
+        },
+        "string-literal": {
+            "patterns": []
         }
     },
     "scopeName": "source.razor"
