@@ -37,6 +37,26 @@
                 },
                 "end": "\\n",
                 "name": "comment.line.number-sign.razor-script"
+            }, {
+                "name": "comment.block.razor-script",
+                "begin": "(/\\*)(?:\\s*((@)internal)(?=\\s|(\\*/)))?",
+                "beginCaptures": {
+                    "1": {
+                        "name": "punctuation.definition.comment.razor-script"
+                    },
+                    "2": {
+                        "name": "storage.type.internaldeclaration.razor-script"
+                    },
+                    "3": {
+                        "name": "punctuation.decorator.internaldeclaration.razor-script"
+                    }
+                },
+                "end": "\\*/",
+                "endCaptures": {
+                    "0": {
+                        "name": "punctuation.definition.comment.razor-script"
+                    }
+                }
             }]
         },
         "ctrl-flow-statements": {
