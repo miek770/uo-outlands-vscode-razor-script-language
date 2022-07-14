@@ -48,12 +48,20 @@
         "reserveds": {
             "patterns": [{
                 "include": "#language-constants"
+            }, {
+                "include": "#skills"
             }]
         },
         "language-constants": {
             "patterns": [{
                 "name": "variable.language.constants.razor-script",
                 "match": "\\b(count|counter|findbuff|findtype|hidden|hp|maxhp|hits|maxhits|insysmsg|insysmessage|lhandempty|mana|maxmana|mounted|poisoned|position|queued|rhandempty|skill|stam|maxstam|str|dex|int|weight)\\b"
+            }]
+        },
+        "skills": {
+            "patterns": [{
+                "name": "support.constant.skill.razor-script",
+                "match": "\\b(anatomy|animallore|itemidentification|itemid|armslore|begging|peacemaking|peace|cartography|detectinghidden|discord|discordance|evaluatingintelligence|evalint|forensicevaluation|forensiceval|hiding|provocation|provo|inscription|poisoning|spiritspeak|stealing|taming|tasteidentification|tasteid|tracking|meditation|stealth|removetrap)\\b"
             }]
         },
         "value-types": {
