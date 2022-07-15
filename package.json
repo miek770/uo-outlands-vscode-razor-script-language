@@ -3,6 +3,7 @@
     "displayName": "Razor Script Language",
     "description": "Syntax Highlighting for Razor Script Language",
     "version": "0.0.1",
+    "publisher": "UOOutlandsRazorScriptLanguage",
     "engines": {
         "vscode": "^1.69.0"
     },
