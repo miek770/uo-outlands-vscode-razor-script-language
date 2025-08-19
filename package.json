@@ -2,7 +2,7 @@
     "name": "razor-script-language",
     "displayName": "Razor Script Language",
     "description": "Syntax Highlighting for Razor Script Language",
-    "version": "0.0.2",
+    "version": "0.1.0",
     "icon": "images/icon.png",
     "repository": {
         "url": "https://github.com/guilhermeledes/uo-outlands-vscode-razor-script-language.git"
